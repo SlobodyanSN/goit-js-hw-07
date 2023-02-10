@@ -39,4 +39,11 @@ const imageList =
 
     gallery.insertAdjacentHTML('afterbegin', imageList);
 
+    gallery.addEventListener(`click`, onBigImg);
+
+    function onBigImg(event) {
+        event.preventDefault()
+       
+    }
+
 
