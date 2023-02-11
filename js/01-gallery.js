@@ -43,7 +43,16 @@ const imageList =
 
     function onBigImg(event) {
         event.preventDefault()
-       
-    }
+
+        if (event.target.nodeName !== `IMG`) {
+          return;  
+        }
+        const bigIMG = event.target.dataset.sourse
+        const instance = basicLightbox.create(`
+        <img src="${bigIMG}" width="800" height="600">
+    `)
+    
+    instance.show()
+    };
 
 
